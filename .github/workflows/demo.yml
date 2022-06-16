@@ -16,5 +16,5 @@ jobs:
       - name: Archive code coverage results
         uses: actions/upload-artifact@v3
         with:
-          name: mock artifact
-          path: "CI-android_messenger-dagonco_android_10748_r8-preintegration #6 [Jenkins].html"
+          name: mock html
+          path: demo.html

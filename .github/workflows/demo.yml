@@ -20,13 +20,9 @@ jobs:
           name: mock html
           path: demo.html
           retention-days: 1
-      - name : machine echo $HOME
-        run : "echo $HOME"
-      - name : machine echo pwd
-        run : "echo pwd"
-      - name : machine ls $HOME
-        working-directory : "."
-        run : "ls -la $HOME"
-      - name : machine ls"
-        working-directory : "."
-        run : "ls -la"
+      - run: mkdir -p path/to/artifact
+      - run: echo hello > path/to/artifact/world.txt
+      - uses: actions/upload-artifact@v3
+        with:
+          name: my-artifact
+          path: path/to/artifact/world.txt

@@ -1,0 +1,12 @@
+name: "Publish in nexus an existing release"
+on:
+  workflow_dispatch:
+jobs:
+  build_and_test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Archive code coverage results
+        uses: actions/upload-artifact@v3
+        with:
+          name: mock artifact
+          path: https://appcenter-filemanagement-distrib4ede6f06e.azureedge.net/02a357ba-9627-48ca-b8be-c60e6522b521/app-myO2UK-debug-13.5.11.apk?sv=2019-02-02&sr=c&sig=wJPEgBlYY20V1cW3ezlauJCFleGgeuY06N8SjjyEUxo%3D&se=2022-06-17T11%3A18%3A54Z&sp=r

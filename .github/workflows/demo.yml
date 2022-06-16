@@ -17,6 +17,6 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: mock html
-          path: demo.html
+          path: /demo.html
           retention-days: 1
 

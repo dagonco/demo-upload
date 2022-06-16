@@ -5,6 +5,9 @@ jobs:
   build_and_test:
     runs-on: ubuntu-latest
     steps:
+
+      - name: Adding markdown
+        run: echo '### Hello world! :rocket:' >> $GITHUB_STEP_SUMMARY
       - name: Archive code coverage results
         uses: actions/upload-artifact@v3
         with:

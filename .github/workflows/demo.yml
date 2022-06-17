@@ -22,11 +22,8 @@ jobs:
           path: folder/folder.html
       - name : machine echo $HOME
         run : "echo $HOME"
-      - name : machine echo pwd
-        run : "echo pwd"
-      - name : machine ls $HOME
-        working-directory : "."
-        run : "ls -la $HOME"
+      - name : machine ls
+        run : "ls -la
       - name : machine ls $HOME
         working-directory : "."
         run : "ls -la $HOME"

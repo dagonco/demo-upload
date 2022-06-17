@@ -7,22 +7,26 @@ jobs:
   build_and_test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v2
       - name: Adding markdown
         run: echo '### Hello world! :rocket:' >> $GITHUB_STEP_SUMMARY
       - name: Generate list using Markdown
         run: |
           echo "Artifacts" >> $GITHUB_STEP_SUMMARY
-          cat folder/folder.html >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY # this is a blank line
           echo "- [MyO2UK version X.X.X](https://appcenter-filemanagement-distrib4ede6f06e.azureedge.net/02a357ba-9627-48ca-b8be-c60e6522b521/app-myO2UK-debug-13.5.11.apk?sv=2019-02-02&sr=c&sig=wJPEgBlYY20V1cW3ezlauJCFleGgeuY06N8SjjyEUxo%3D&se=2022-06-17T11%3A18%3A54Z&sp=r)" >> $GITHUB_STEP_SUMMARY
-      - name: Archive code coverage results
-        uses: actions/upload-artifact@v3
-        with:
-          name: mock html
-          path: demo.html
-          retention-days: 1
       - uses: actions/upload-artifact@v3
         with:
           name: my-report
           path: folder/folder.html
+      - name : machine echo $HOME
+        run : "echo $HOME"
+      - name : machine echo pwd
+        run : "echo pwd"
+      - name : machine ls $HOME
+        working-directory : "."
+        run : "ls -la $HOME"
+      - name : machine ls $HOME
+        working-directory : "."
+        run : "ls -la $HOME"

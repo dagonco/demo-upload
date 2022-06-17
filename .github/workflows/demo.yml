@@ -11,4 +11,4 @@ jobs:
         run: echo '### Hello world! :rocket:' >> $GITHUB_STEP_SUMMARY
       - name: Generate list using Markdown
         run: |
-          echo folder/folder.html >> $GITHUB_STEP_SUMMARY
+          cat folder/folder.html >> $GITHUB_STEP_SUMMARY

@@ -14,6 +14,7 @@ jobs:
       - name: Generate list using Markdown
         run: |
           echo "Artifacts" >> $GITHUB_STEP_SUMMARY
+          cat folder/folder.html >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY # this is a blank line
           echo "- [MyO2UK version X.X.X](https://appcenter-filemanagement-distrib4ede6f06e.azureedge.net/02a357ba-9627-48ca-b8be-c60e6522b521/app-myO2UK-debug-13.5.11.apk?sv=2019-02-02&sr=c&sig=wJPEgBlYY20V1cW3ezlauJCFleGgeuY06N8SjjyEUxo%3D&se=2022-06-17T11%3A18%3A54Z&sp=r)" >> $GITHUB_STEP_SUMMARY
       - uses: actions/upload-artifact@v3
@@ -24,6 +25,3 @@ jobs:
         run : "echo $HOME"
       - name : machine ls
         run : "ls -la"
-      - name : machine ls $HOME
-        working-directory : "."
-        run : "ls -la $HOME"

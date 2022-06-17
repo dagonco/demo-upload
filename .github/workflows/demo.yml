@@ -23,7 +23,7 @@ jobs:
       - name : machine echo $HOME
         run : "echo $HOME"
       - name : machine ls
-        run : "ls -la
+        run : "ls -la"
       - name : machine ls $HOME
         working-directory : "."
         run : "ls -la $HOME"
